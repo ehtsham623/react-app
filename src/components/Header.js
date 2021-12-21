@@ -2,7 +2,7 @@
 const Header = () => {
     return (
         <header>
-            <h1>task tracker</h1>
+            <h1>Task Tracker</h1>
         </header>
     )
 }
