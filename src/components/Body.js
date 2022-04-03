@@ -1,8 +1,12 @@
-const Body = ({ bodyHeading, bodyText }) => {
+const Body = ({}) => {
   return (
     <div>
-      <h1>{bodyHeading}</h1>
-      <p>{bodyText}</p>
+      <h1>Body</h1>
+      <ul style={{ width: 70 }}>
+        <li>name</li>
+        <li>contact</li>
+        <li>email</li>
+      </ul>
     </div>
   );
 };
