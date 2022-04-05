@@ -7,7 +7,6 @@ const App = () => {
     <>
       <Header headerTitle="Props Example" />
       <Body />
-      <ExportExample />
       <Footer />
     </>
   );
