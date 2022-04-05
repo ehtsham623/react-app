@@ -1,5 +1,9 @@
 //props are properties and they are like arguments
-const Header = (props) => {
+//rfc -->   this is a rfc example
+import React from "react";
+import PropTypes from "prop-types";
+
+export default function Header(props) {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,6 +51,6 @@ const Header = (props) => {
       </nav>
     </header>
   );
-};
-
-export default Header;
+}
+Header.prototype = { headerTitle: PropTypes.string.isRequired };
+Header.defaultProps = { headerTitle: "Header Title" };

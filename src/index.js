@@ -16,5 +16,6 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-//sfc
+//sfc --> function and return statement are seperate --> deprecated use fc instead
+//rfc --> export fucntion directly
 //ffc
