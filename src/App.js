@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-import ExportExample from "./exportExample/ExportExample";
+//import ExportExample from "./exportExample/ExportExample";
 const App = () => {
   return (
     <div style={{ background: "white" }}>

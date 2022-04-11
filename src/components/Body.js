@@ -1,11 +1,10 @@
+import React from "react";
 import TextForms from "./TextForms";
 
-const Body = ({}) => {
+export default function Body() {
   return (
     <div>
       <TextForms />
     </div>
   );
-};
-
-export default Body;
+}
