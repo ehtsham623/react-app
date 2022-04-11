@@ -4,11 +4,11 @@ import Footer from "./components/Footer";
 import ExportExample from "./exportExample/ExportExample";
 const App = () => {
   return (
-    <>
-      <Header headerTitle="Props Example" />
+    <div style={{ background: "white" }}>
+      <Header headerTitle="Ehtsham" />
       <Body />
       <Footer />
-    </>
+    </div>
   );
 };
 
