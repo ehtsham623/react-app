@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function TextForms() {
+export default function TextForm() {
   //on Clicks
   const upClick = () => {
     setTextEditorState(textEditorValue.toUpperCase());
@@ -19,9 +19,23 @@ export default function TextForms() {
   //states
   const [textEditorValue, setTextEditorState] = useState("");
 
+  //get summery text
+  const getSummeryText = () => {
+    const value =
+      textEditorValue.length === 0
+        ? "Please write something to get summery of it."
+        : textEditorValue.split(/[^\s]+/).length -
+          1 +
+          " words and " +
+          textEditorValue.length +
+          "characters in this text.";
+
+    return value;
+  };
+
   return (
     <>
-      <div className="mb-3 container" style={{ background: "lightgrey" }}>
+      <div className="mb-3 container" style={{ background: "lightgrey"  }}>
         <h1>Text Editor</h1>
         <textarea
           className="form-control"
@@ -43,15 +57,7 @@ export default function TextForms() {
       </div>
       <div className="container">
         <h1>Text Summery</h1>
-
-        {textEditorValue.length === 0 ? 
-          <p>Please write something to get summery</p>
-         : 
-          <p>
-            {textEditorValue.split(/[^\s]+/).length - 1} words and{" "}
-            {textEditorValue.length} characters in this text.
-          </p>
-    }
+        <p>{getSummeryText()}</p>
       </div>
     </>
   );

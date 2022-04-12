@@ -1,12 +1,24 @@
 //props are properties and they are like arguments
 //rfc -->   this is a rfc example
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 export default function Header(props) {
+  //states
+  const [isDarkMode, setThemeValue] = useState(false);
+
+  //dark mode button click
+  const toggleTheme = () => {
+    setThemeValue(!isDarkMode);
+  };
+
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        className={`navbar navbar-expand-lg navbar-${
+          isDarkMode ? "dark" : "light"
+        } bg-${isDarkMode ? "dark" : "light"}`}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             {props.headerTitle}
@@ -31,21 +43,15 @@ export default function Header(props) {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">
-                  Contect
+                  About Us
                 </a>
               </li>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Type.."
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
+            <div className="d-flex">
+              <button className="btn btn-light" onClick={toggleTheme}>
+                {isDarkMode ? "Dark Mode Navbar" : "Light Mode Navbar"}
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </nav>

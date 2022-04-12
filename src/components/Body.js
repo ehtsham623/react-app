@@ -1,10 +1,12 @@
 import React from "react";
-import TextForms from "./TextForms";
+import AboutUs from "./AboutUs";
+import TextForm from "./TextForm";
 
 export default function Body() {
   return (
     <div>
-      <TextForms />
+      <TextForm />
+      <AboutUs />
     </div>
   );
 }
