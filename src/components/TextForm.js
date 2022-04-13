@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 
-export default function TextForm() {
+export default function TextForm(props) {
   //on Clicks
   const upClick = () => {
     setTextEditorState(textEditorValue.toUpperCase());
+    props.alertFunction("success", "Text is now in UPPERCASE");
   };
   const lcClick = () => {
     setTextEditorState(textEditorValue.toLowerCase());
+    props.alertFunction("warning", "Text is now in lowercase");
   };
   const trimClick = () => {
     setTextEditorState(textEditorValue.replaceAll(" ", ""));
+    props.alertFunction("info", "Text is now without spaces");
   };
   //on Changes
   const onTextEditorChange = (event) => {
@@ -35,7 +38,7 @@ export default function TextForm() {
 
   return (
     <>
-      <div className="mb-3 container" style={{ background: "lightgrey"  }}>
+      <div className="mb-3 container" style={{ background: "lightgrey" }}>
         <h1>Text Editor</h1>
         <textarea
           className="form-control"
