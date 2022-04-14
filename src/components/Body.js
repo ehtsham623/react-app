@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MyAlert from "../shared/MyAlert";
 import AboutUs from "./AboutUs";
 import TextForm from "./TextForm";
+import { Routes, Route } from "react-router-dom";
 
 export default function Body() {
   //states
@@ -20,8 +21,10 @@ export default function Body() {
   return (
     <div>
       <MyAlert alert={alertData} />
-      <TextForm alertFunction={showAlert} />
-      <AboutUs />
+      <Routes>
+        <Route path="/" element={<TextForm alertFunction={showAlert} />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
     </div>
   );
 }
