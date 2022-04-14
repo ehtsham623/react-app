@@ -22,8 +22,8 @@ export default function Body() {
     <div>
       <MyAlert alert={alertData} />
       <Routes>
-        <Route path="/" element={<TextForm alertFunction={showAlert} />} />
-        <Route path="/about" element={<AboutUs />} />
+        <Route exact path="/" element={<TextForm alertFunction={showAlert} />} />
+        <Route exact path="/about" element={<AboutUs />} />
       </Routes>
     </div>
   );
