@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
 
 // If you want to start measuring performance in your app, pass a function
@@ -18,4 +18,7 @@ reportWebVitals();
 
 //sfc --> function and return statement are seperate --> deprecated use fc instead
 //rfc --> export fucntion directly
-//ffc
+//ffc -->  fucntion syntax wih export default
+//rcc --> class base component
+//rce --> class export base component
+//rcep --> class export base component with props 
